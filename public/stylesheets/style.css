@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+.jumbotron {
+  border-radius: 12px;
+}
+.categories {
+  display: flex;
+  justify-content: left;
+  padding: .3vmin;
+
+}

@@ -12,11 +12,21 @@
   <div class="jumbotron">
     <h1 class="display-4">Chuck Norris Jokes You Requested?</h1>
     <hr class="my-4">
-    <p class="lead">click the button below for some fun</p>
     <form action="/" method="GET">
-      <a class="btn btn-primary btn-lg" type="submit" role="button">Get Chuck Norris Joke</a>
+      <% categories.forEach(function(c){ %>
+      <div class="radio">
+        <label>
+          <input type="radio" name="category" value="<%= c %>">
+          <%= c %>
+        </label>
+      </div>
+      <% }) %>
+      <button class="btn btn-primary btn-lg" type="submit" role="button">Get Chuck Norris Joke</button>
     </form>
-  </div>
+    <div>
+      <h3> <%= category %></h3>
+      <h4><%= joke %></h4>
+    </div>
 </body>
 
 </html>

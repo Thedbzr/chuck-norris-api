@@ -1,13 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const fetch = require('node-fetch');
+const chuckCtrl = require('../controllers/chuck');
 
-const rootURL = 'https://api.chucknorris.io/jokes/random';
-
-
-router.get('/', function(req, res, next) {
-  const 
-  res.render('index');
-});
+router.get('/', chuckCtrl.index);
 
 module.exports = router;
